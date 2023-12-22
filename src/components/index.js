@@ -3,6 +3,7 @@ import Home from './Home';
 import About from './About';
 import Footer from './Footer';
 import NavBar from './NavBar';
+import Settings from './Settings';
 
 export {
   Home,
@@ -10,4 +11,5 @@ export {
   Footer,
   StarsCanvas,
   NavBar,
+  Settings,
 }

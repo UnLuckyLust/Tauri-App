@@ -1,7 +1,6 @@
 import React from 'react';
 import { Typography } from "@material-tailwind/react";
-import { Organization} from '../constants';
-import { styles } from '../styles'
+import { Organization, styles} from '../constants';
 
 const currentYear = new Date().getFullYear();
 
