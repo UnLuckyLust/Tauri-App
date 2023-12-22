@@ -1,27 +1,16 @@
 import React from 'react';
-import { useState, useRef } from 'react';
 import { Typography } from "@material-tailwind/react";
-import { logo } from '../constants'
-import { SiteName, Organization} from '../constants';
-import { Highlight_Color } from '../constants';
+import { Organization} from '../constants';
 import { styles } from '../styles'
 
 const currentYear = new Date().getFullYear();
-const textColor = 'gray'
-const linkColor = 'blue'
 
-const Footer = ({ clearBG }) => {  
+const Footer = ({ clearBG }) => { 
   return (
-    <div className={`${clearBG ? 'bg-none' : 'bg-primary' } ${styles.paddingX} w-[100%] fixed z-30 bottom-0 left-0 drop-shadow-[0_-10px_10px_rgba(0,0,0,1)]`}>
+    <div onContextMenu={(e)=> e.preventDefault()} className={`${clearBG ? 'bg-none' : 'bg-primary'} ${styles.paddingX} w-[100%] fixed z-30 bottom-0 left-0 drop-shadow-[0_-10px_10px_rgba(0,0,0,1)]`}>
       <div className={`py-2 flex w-full flex-row items-center justify-between`}>
-        <a href="https://DreamsWeaver.co" target="_tauri" className='flex flex-row gap-[0.5rem] items-center cursor-default'>
-          <Typography
-            variant="small"
-            className="mb-4 text-center font-normal md:mb-0"
-            color={textColor}
-          >
-            &copy; {currentYear} {Organization} | all rights reserved
-          </Typography>          
+        <a href="https://DreamsWeaver.co" target="_tauri" className='cursor-default select-none text-[14px]'>
+          &copy; {currentYear} {Organization} | all rights reserved         
         </a>
         <div className="flex gap-4 text-secondary sm:justify-center">
           {/* YouTube */}

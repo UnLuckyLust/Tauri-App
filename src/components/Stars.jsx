@@ -15,11 +15,11 @@ const Stars = (props) => {
   });
 
   return (
-    <group rotation={[0, 0, Math.PI / 4]}>
+    <group rotation={[0, 0, Math.PI / 2]}>
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color='#f272c8'
+          color='#191919'
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}
@@ -31,7 +31,7 @@ const Stars = (props) => {
 
 const StarsCanvas = () => {
   return (
-    <div className={`w-full h-${monitor.size} fixed inset-0 z-[-1] bg-primary`}>
+    <div onContextMenu={(e)=> e.preventDefault()} className={`w-full h-${monitor.size} fixed inset-0 z-[-1] bg-primary`}>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />

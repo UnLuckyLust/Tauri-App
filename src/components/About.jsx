@@ -3,7 +3,7 @@ import { styles } from '../styles';
 
 const About = () => {
   return (
-    <div className={`w-[100%] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]`}>
+    <div onContextMenu={(e)=> e.preventDefault()} className={`select-none w-[100%] fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]`}>
       <div className={`mx-[10%] flex flex-col justify-center gap-6 items-center`}>
         <h2 className={`${styles.sectionHeadText}`}>A Glimpse into Our Journey</h2>
         <p className={`${styles.sectionInfoText} overflow-auto`} >
