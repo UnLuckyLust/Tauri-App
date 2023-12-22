@@ -115,7 +115,7 @@ const NavBar = ({ useLinks, OnlySmall, NavList }) => {
 
       <div className="w-min flex gap-1">
         <button onClick={() => { appWindow.minimize(); }} className='contrast-0 hover:contrast-100 transition-[.3s] cursor-default'>🟡</button>
-        <button onClick={() => {setMaximized(!maximized); maximized ? appWindow.unmaximize() : appWindow.maximize() }} className='contrast-0 hover:contrast-100 transition-[.3s]'>🔵</button>
+        <button onClick={() => {setMaximized(!maximized); maximized ? appWindow.unmaximize() : appWindow.maximize() }} className='contrast-0 hover:contrast-100 transition-[.3s]'>🟠</button>
         <button onClick={() => { appWindow.close(); }} className='contrast-0 hover:contrast-100 transition-[.3s] cursor-default'>🔴</button>
       </div>
     </nav>

@@ -4,7 +4,8 @@
     "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run dev",
     "devPath": "http://localhost:5173",
-    "distDir": "../dist"
+    "distDir": "../dist",
+    "withGlobalTauri": false
   },
   "package": {
     "productName": "SafeWallet",
@@ -12,21 +13,123 @@
   },
   "tauri": {
     "allowlist": {
+      "all": false,
+      "app": {
+        "all": false,
+        "hide": false,
+        "show": false
+      },
+      "clipboard": {
+        "all": false,
+        "readText": false,
+        "writeText": false
+      },
+      "dialog": {
+        "all": false,
+        "ask": false,
+        "confirm": false,
+        "message": false,
+        "open": false,
+        "save": false
+      },
+      "fs": {
+        "all": false,
+        "copyFile": false,
+        "createDir": false,
+        "exists": false,
+        "readDir": false,
+        "readFile": false,
+        "removeDir": false,
+        "removeFile": false,
+        "renameFile": false,
+        "scope": ["$APP/*", "$DOWNLOAD/*"],
+        "writeFile": true
+      },
+      "globalShortcut": {
+        "all": false
+      },
+      "http": {
+        "all": false,
+        "request": false,
+        "scope": []
+      },
+      "notification": {
+        "all": false
+      },
+      "os": {
+        "all": false
+      },
+      "path": {
+        "all": true
+      },
+      "process": {
+        "all": false,
+        "exit": false,
+        "relaunch": false,
+        "relaunchDangerousAllowSymlinkMacos": false
+      },
+      "protocol": {
+        "all": false,
+        "asset": false,
+        "assetScope": []
+      },
+      "shell": {
+        "all": false,
+        "execute": false,
+        "open": ".*",
+        "scope": [],
+        "sidecar": false
+      },
       "window": {
         "all": false,
+        "center": false,
         "close": true,
+        "create": false,
+        "hide": false,
         "maximize": true,
-        "unmaximize": true,
         "minimize": true,
-        "unminimize": true,
-        "startDragging": true
+        "print": false,
+        "requestUserAttention": false,
+        "setAlwaysOnTop": false,
+        "setClosable": false,
+        "setContentProtected": false,
+        "setCursorGrab": false,
+        "setCursorIcon": false,
+        "setCursorPosition": false,
+        "setCursorVisible": false,
+        "setDecorations": false,
+        "setFocus": false,
+        "setFullscreen": false,
+        "setIcon": false,
+        "setIgnoreCursorEvents": false,
+        "setMaxSize": false,
+        "setMaximizable": false,
+        "setMinSize": false,
+        "setMinimizable": false,
+        "setPosition": false,
+        "setResizable": false,
+        "setSize": false,
+        "setSkipTaskbar": false,
+        "setTitle": false,
+        "show": false,
+        "startDragging": true,
+        "unmaximize": true,
+        "unminimize": true
       }
     },
     "bundle": {
-      "active": true,
-      "category": "DeveloperTool",
+      "active": false,
+      "category": "Entertainment",
       "copyright": "© 2023 Dreams Weaver (UnLuckyLust)",
+      "identifier": "co.dreamsweaver",
+      "publisher": "Dreams Weaver",
+      "shortDescription": "",
+      "longDescription": "",
+      "appimage": {
+        "bundleMediaFramework": false
+      },
       "deb": {
+        "files": {},
         "depends": []
       },
       "externalBin": [],
@@ -37,30 +140,50 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "co.dreamsweaver",
-      "publisher": "Dreams Weaver",
-      "longDescription": "",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
         "frameworks": [],
         "providerShortName": null,
-        "signingIdentity": null
+        "signingIdentity": null,
+        "minimumSystemVersion": "10.13"
       },
       "resources": [],
-      "shortDescription": "",
       "targets": "all",
       "windows": {
+        "allowDowngrades": true,
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
-        "timestampUrl": ""
+        "nsis": null,
+        "timestampUrl": null,
+        "tsp": false,
+        "webviewFixedRuntimePath": null,
+        "webviewInstallMode": {
+          "silent": true,
+          "type": "downloadBootstrapper"
+        },
+        "wix": null
       }
     },
+    "macOSPrivateApi": false,
+    "pattern": {
+      "use": "brownfield"
+    },
     "security": {
-      "csp": null
+      "csp": null,
+      "dangerousDisableAssetCspModification": false,
+      "dangerousRemoteDomainIpcAccess": [],
+      "dangerousUseHttpScheme": false,
+      "freezePrototype": false
     },
     "updater": {
-      "active": false
+      "active": false,
+      "dialog": true,
+      "pubkey": "",
+      "windows": {
+        "installMode": "passive",
+        "installerArgs": []
+      }
     },
     "windows": [
       {
@@ -80,7 +203,7 @@
       }
     ],
     "systemTray": {
-      "iconPath": "icons/icon.png",
+      "iconPath": "icons/Square310x310Logo.png",
       "iconAsTemplate": true
     }
   }
