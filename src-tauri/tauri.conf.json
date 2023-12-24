@@ -8,7 +8,7 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "SafeWallet",
+    "productName": "TauriApp",
     "version": "1.0.0"
   },
   "tauri": {
@@ -21,8 +21,8 @@
       },
       "clipboard": {
         "all": false,
-        "readText": false,
-        "writeText": false
+        "readText": true,
+        "writeText": true
       },
       "dialog": {
         "all": false,
@@ -43,7 +43,7 @@
         "removeFile": false,
         "renameFile": false,
         "scope": ["$APP/*", "$DOWNLOAD/*"],
-        "writeFile": true
+        "writeFile": false
       },
       "globalShortcut": {
         "all": false
@@ -60,7 +60,7 @@
         "all": false
       },
       "path": {
-        "all": true
+        "all": false
       },
       "process": {
         "all": false,
@@ -76,7 +76,7 @@
       "shell": {
         "all": false,
         "execute": false,
-        "open": ".*",
+        "open": false,
         "scope": [],
         "sidecar": false
       },
@@ -84,7 +84,7 @@
         "all": false,
         "center": false,
         "close": true,
-        "create": true,
+        "create": false,
         "hide": false,
         "maximize": true,
         "minimize": true,
@@ -118,9 +118,9 @@
       }
     },
     "bundle": {
-      "active": false,
+      "active": true,
       "category": "Entertainment",
-      "copyright": "© 2023 Dreams Weaver (UnLuckyLust)",
+      "copyright": "Dreams Weaver (UnLuckyLust) 2023 ©",
       "identifier": "co.dreamsweaver",
       "publisher": "Dreams Weaver",
       "shortDescription": "",
@@ -137,6 +137,7 @@
         "icons/32x32.png",
         "icons/128x128.png",
         "icons/128x128@2x.png",
+        "icons/Square310x310Logo.png",
         "icons/icon.icns",
         "icons/icon.ico"
       ],
@@ -188,8 +189,9 @@
     "windows": [
       {
         "decorations": false,
-        "label": "SafeWallet",
-        "title": "Safe Wallet",
+        "transparent": true,
+        "label": "TauriApp",
+        "title": "Tauri App",
         "contentProtected": true,
         "fullscreen": false,
         "resizable": false,

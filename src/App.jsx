@@ -10,7 +10,6 @@ const HomePage = () => {
         <div className="relative z-0">
           <Home />
           <StarsCanvas />
-          <Footer clearBG={true} />
         </div>
       </div>
     </div>
@@ -37,7 +36,6 @@ const App = () => {
             <NavBar clearBG={true} />
             <About />
             <StarsCanvas />
-            <Footer clearBG={true} />
           </div>
         } />
 
@@ -46,7 +44,6 @@ const App = () => {
             <NavBar clearBG={true} />
             <Settings />
             <StarsCanvas />
-            <Footer clearBG={true} />
           </div>
         } />
 
